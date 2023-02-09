@@ -1,14 +1,11 @@
 const express = require('express');
-const connection = require('./sql'); 
-
 const app = express();
 
 app.use(express.json());
 
 app.use(require('./router'));
 
-app.get('/', (req, res) => {
-    console.log(connection);
+app.get('/', (req, res) => { 
     res.send("Welcome");
 })
 
